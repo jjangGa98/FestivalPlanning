@@ -45,7 +45,7 @@ public class UserController {
 
 		// 유효성 검증 실패
 		if (bindingResult.hasErrors() || result == 0) {
-		
+
 			return "join";
 		}
 		// 회원가입 성공
@@ -55,6 +55,7 @@ public class UserController {
 
 	@GetMapping("/login")
 	public String login() {
+
 		return "login";
 	}
 
@@ -69,6 +70,7 @@ public class UserController {
 
 		if (tryLogin) {
 			session.setAttribute("loginId", userDto.getLoginId());
+
 			return "main";
 		}
 		ScriptUtil.alert(response, "입력하신 정보가 일치하지 않습니다.");

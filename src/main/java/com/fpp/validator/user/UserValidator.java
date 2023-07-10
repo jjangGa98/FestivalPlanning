@@ -11,8 +11,9 @@ public class UserValidator {
 	static String NAME_REG = "^[가-힣]{2,}$"; // name 정규식 {2,}글자수
 	static String EMAIL_REG = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"; // email 정규식
 	static String TEL_REG = "^\\d{3}-\\d{3,4}-\\d{4}$"; // tel-Number 정규식 000- 000, 0000 -0000 패턴
-	static String BIRTH_REG = "^(\\d{4})-(\\d{2})-(\\d{2})$"; // birth 정규식 {4, 2, 2}글자수 ex)1998-04-19
-
+	static String BIRTH_REG = "^(19[0-9][0-9]|20\\d{2})-(0[0-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$"; // birth 정규식 {4, 2, 2}글자수 ex)1998-04-19
+//"^(\\d{4})-(\\d{2})-(\\d{2})$" 개선전 생년월일 정규식
+	
 	public static void validate(Object target, Errors errors) {
 		// TODO Auto-generated method stub
 

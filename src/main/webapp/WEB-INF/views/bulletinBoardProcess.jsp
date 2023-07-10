@@ -265,12 +265,13 @@
 		contentTextarea.value = '${updateBulletinBoard.content}';
 
 		/*select 값 수정 금지 */
-		var typeOfInquirySelect = document.getElementById('typeOfInquiry');
+	/* 	var typeOfInquirySelect = document.getElementById('typeOfInquiry');
 
 		typeOfInquirySelect.addEventListener('click', function() {
-			typeOfInquirySelect.disabled = true; // 비활성화
-			alert('수정할 수 없습니다.');
-		});
+			typeOfInquirySelect.disabled = false; // 비활성화
+			
+		}); */
+		// 게시판 수정 할 때 문의 유형 비활성화를 활성화
 	</script>
 
 

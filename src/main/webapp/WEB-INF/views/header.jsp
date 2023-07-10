@@ -43,12 +43,13 @@
 						href="festivalList">지역축제</a></li>
 					<li class="nav-item"><a class="nav-link active fs-5"
 						href="list">행사문의</a></li>
-					<li class="nav-item"><a class="nav-link active fs-5" href="staffRecruitmentList">채용공고</a></li>
+					<li class="nav-item"><a class="nav-link active fs-5"
+						href="staffRecruitmentList">채용공고</a></li>
 					<li class="nav-item"><a class="nav-link active fs-5"
 						href="bulletinBoardList">게시판</a></li>
 				</ul>
 				<!-- Button trigger modal -->
-<!-- 				<div class="search-btnbox">
+				<!-- 				<div class="search-btnbox">
 					<img src="images/searchicon.svg" class="form-control search-btn1"
 						data-bs-toggle="modal" data-bs-target="#exampleModal">
 				</div> -->
@@ -83,11 +84,11 @@
 					<c:otherwise>
 						<c:choose>
 							<c:when test="${sessionScope.loginId eq 'admin'}">
+							<%-- <c:when test="${sessionScope.authority eq '0'}"> --%>
 								<ul class="nav justify-content-end ms-2">
 									<li class="nav-item"><span class="nav-link"> 관리자모드
-											접속중</span></li>
-									<li class="nav-item"><a class="nav-link"
-										href="admin">관리자페이지</a></li>
+											</span></li>
+									<li class="nav-item"><a class="nav-link" href="admin">관리자페이지</a></li>
 									<li class="nav-item"><a class="nav-link" href="logout">로그아웃</a></li>
 								</ul>
 							</c:when>
@@ -100,12 +101,14 @@
 										data-bs-toggle="dropdown" aria-expanded="false"> 마이페이지 </a>
 										<ul class="dropdown-menu menubox">
 											<li><a class="dropdown-item" href="myApplicationList"></a></li>
-											<li><a class="dropdown-item" href="myApplicationList">나의 견적 내역</a></li>
+											<li><a class="dropdown-item" href="myApplicationList">나의
+													견적 내역</a></li>
 											<li><hr class="dropdown-divider"></li>
-										
-											<li><a class="dropdown-item" href="myBulletinBoardList">나의 문의 내역</a></li>
+
+											<li><a class="dropdown-item" href="myBulletinBoardList">나의
+													문의 내역</a></li>
 											<li><hr class="dropdown-divider"></li>
-										
+
 											<li><a class="dropdown-item" href="pwcheck">회원정보 수정</a></li>
 											<li><hr class="dropdown-divider"></li>
 											<li><a class="dropdown-item" href="withdrawal">회원탈퇴</a></li>

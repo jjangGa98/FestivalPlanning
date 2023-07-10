@@ -6,23 +6,20 @@
 <mapper namespace="user_mapper">
 	<!-- #{~~~} 안에 있는 애들은 DTO 필드명, 쿼리문은 DB컬럼명 -->
 	<insert id="insert_user" parameterType="UserDto">
-		insert into f_user
-		values
-		( #{loginId}, #{loginPw}, #{name}, #{email}, #{telNumber}, #{birth} )
+		insert into f_user (login_id, login_pw, name, email, tel_number, birth)
+		values( #{loginId}, #{loginPw}, #{name}, #{email}, #{telNumber}, #{birth} )
 	</insert>
 
 	<select id="select_user_by_id" resultType="UserDto"
 		parameterType="UserDto">
-		select login_id, login_pw, name, email, tel_number,
-		birth
+		select login_id, login_pw, name, email, tel_number, birth, authority
 		from f_user
-		where login_Id = #{loginId}
+		where login_Id = #{loginId} and authority = authority
 	</select>
 
 	<select id="select_user_by_pw" resultType="UserDto"
 		parameterType="UserDto">
-		select login_id, login_pw, name, email, tel_number,
-		birth
+		select login_id, login_pw, name, email, tel_number,	birth, authority
 		from f_user
 		where login_Pw = #{loginPw}
 	</select>
@@ -36,6 +33,11 @@
 
 	<delete id="delete_user_info" parameterType="UserDto">
 		delete from f_user
+		where login_Pw = #{loginPw} and login_Id = #{loginId}
+	</delete>
+	
+	<delete id="delete_user_info" parameterType="UserDto">
+		delete from f_user 
 		where login_Pw = #{loginPw} and login_Id = #{loginId}
 	</delete>
 

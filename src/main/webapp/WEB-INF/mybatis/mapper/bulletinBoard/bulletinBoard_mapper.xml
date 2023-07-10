@@ -101,7 +101,6 @@
 	<delete id="delete_BulletinBoard_By_Bno" parameterType="int">
 		DELETE
 		FROM Bulletin_Board
-		WHERE BNO =
-		#{bno}
+		WHERE BNO =	#{bno}
 	</delete>
 </mapper>

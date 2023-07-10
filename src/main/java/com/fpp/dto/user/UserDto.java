@@ -13,4 +13,5 @@ public class UserDto {
 	String email;
 	String telNumber;
 	String birth;
+	String authority;
 }

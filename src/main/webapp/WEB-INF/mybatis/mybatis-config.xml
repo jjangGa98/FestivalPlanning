@@ -13,7 +13,7 @@
 	<typeAliases>	<!-- mapper-parameterType -->
 		<typeAlias type="com.fpp.dto.commonCode.CommonCodeDto"
 			alias="CommonCodeDto" />
-
+		<typeAlias type="com.fpp.dto.user.UserDto" alias="UserDto" />
 		<typeAlias type="com.fpp.dto.board.FormDto" alias="FormDto" />
 		<typeAlias type="com.fpp.dto.bulletinBoard.BulletinBoardDto"
 			alias="BulletinBoardDto" />
@@ -33,7 +33,6 @@
 			alias="StaffApplyListDto" />
 		<typeAlias type="com.fpp.dto.festivalData.FestivalDataDto"
 			alias="FestivalDataDto" />
-		<typeAlias type="com.fpp.dto.user.UserDto" alias="UserDto" />
 	</typeAliases>
 
 

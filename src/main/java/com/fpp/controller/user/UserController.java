@@ -175,6 +175,7 @@ public class UserController {
 		userDto.setLoginId(session.getAttribute("loginId").toString());
 
 		int result = userService.WithdrawalUserInfo(userDto);
+		
 		// 회원탈퇴 성공
 		if (result != 0) {
 			return "redirect:/withdrawalsuccess";
